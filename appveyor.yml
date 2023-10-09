@@ -1,0 +1,20 @@
+version: 1.0.{build}
+before_build:
+- sh: 7z a source.zip $APPVEYOR_BUILD_FOLDER\*
+build:
+  verbosity: minimal
+after_build:
+- sh: 7z a -r bin.zip ~/*/bin/*
+artifacts:
+- path: bin.zip
+  name: bin
+- path: source.zip
+  name: source
+notifications:
+- provider: Webhook
+  url: https://appveyorlocal.requestcatcher.com/
+  method: POST
+  on_build_success: true
+  on_build_failure: false
+  on_build_status_changed: false
+...
