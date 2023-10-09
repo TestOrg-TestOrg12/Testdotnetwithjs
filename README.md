@@ -1,5 +1,5 @@
 # TSEasyStockManagment
-Asp.Net Core MVC - Product Stock Management 
+Asp.Net Core MVC - Product Stock Management  Test
 
 TSEasyStockManagement is ASP.NET Core (3.1), C#, EF code first web applications that help you to manage your all stock item.Test
 
